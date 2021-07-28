@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <link href="style.css?q={{ time }}" rel="stylesheet" type="text/css" />
+    <link href="../static/css/style.css?q={{ time }}" rel="stylesheet" type="text/css" />
   </head>
-  
-  <body>
+  <body class = "body">
   <div class = "navbar">
-    <a class = "active" href = "index.html">Home</a>
+    <a class = "active" href = "{{  url_for('index')}}">Home</a>
         <div class="dropdown">
     <button class="dropbtn">Pollution
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="AirPollution.html">Air Pollution</a>
-      <a href="WaterPollution.html">Water Pollution</a>
-      <a href="LandPollution.html">Land Pollution</a>
+      <a href="{{  url_for('AirPollution')}} ">Air Pollution</a>
+      <a href="{{  url_for('WaterPollution')}} ">Water Pollution</a>
+      <a href="{{  url_for('LandPollution')}}">Land Pollution</a>
     </div>
   </div>
-    <a href = "WaysToHelp.html">Ways To Help</a>
-    <a href = "Survey.html">Survey</a>
+    <a href = "{{  url_for('WaysToHelp')}}">Ways To Help</a>
+    <a href = "{{  url_for('Survey')}}">Survey</a>
 
   </div> 
 <br></br>
@@ -33,7 +32,7 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
 			<div class="card" style="width: 37.82rem;">
-				<img class="card-img-top" src= "img/pollution1.jpeg" width = "600" height = "400">
+				<img class="card-img-top" src= "../static/images/pollution1.jpeg" width = "600" height = "400">
       <div class="card-body">
       <h3 class="card-title text-center" >Air Pollution</h3>
       <p class="card-text text-center">The release of toxic materials into the air can cause a varaiety of health issues, including heart disease, lung disease and even cognitive impairment.</p>
@@ -45,7 +44,7 @@
 
   <div class="mySlides fade">
 			<div class="card" style="width: 37.9rem;">
-				<img class="card-img-top" src= "img/pollution2.jpeg" width = "600" height = "400">
+				<img class="card-img-top" src= "../static/images/pollution2.jpeg" width = "600" height = "400">
       <div class="card-body">
       <h3 class="card-title">Water Pollution</h3>
       <p class="card-text">Water has been widely known for being the solvent that is capable of dissolving various substances. Because of this, water can be easily polluted. When harmful substances are released into bodies of water, such as streams or rivers, they easily dissolve and mix with the water resulting in contamination. Contaminated Water can have severe health risks for both Wildlife and Humans.</p>
@@ -56,7 +55,7 @@
 
   <div class="mySlides fade">
 			<div class="card" style="width: 37.9rem;">
-				<img class="card-img-top" src= "img/pollution3.jpeg" width = "600" height = "400">
+				<img class="card-img-top" src= "../static/images/pollution3.jpeg" width = "600" height = "400">
       <div class="card-body">
       <h3 class="card-title">Land Pollution</h3>
       <p class="card-text">Some informations about land pollution. Some Other infomration about land pollution. </p>
@@ -78,6 +77,6 @@
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
-    <script src="script.js"></script>
+    <script src="../static/css/script.js"></script>
   </body>
 </html>

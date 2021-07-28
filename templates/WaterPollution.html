@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/style.css?q={{ time }}" rel="stylesheet" type="text/css" />
   </head>
 
   <style>
@@ -13,22 +13,22 @@
   }
   </style>
 
-  <body>
+  <body class = "body">
 
     <div class = "navbar">
-    <a class ="home" href = "index.html"> Home</a>
+    <a class ="home" href = "{{  url_for('index')}}"> Home</a>
         <div class="dropdown">
     <button class="dropbtn active">Pollution
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="AirPollution.html">Air Pollution</a>
-      <a href="WaterPollution.html">Water Pollution</a>
-      <a href="LandPollution.html">Land Pollution</a>
+      <a href="{{  url_for('AirPollution')}} ">Air Pollution</a>
+      <a href="{{  url_for('WaterPollution')}} ">Water Pollution</a>
+      <a href="{{  url_for('LandPollution')}}">Land Pollution</a>
     </div>
   </div>
-    <a href = "WaysToHelp.html">Ways To Help</a>
-    <a href = "Survey.html">Survey</a>
+    <a href = "{{  url_for('WaysToHelp')}}">Ways To Help</a>
+    <a href = "{{  url_for('Survey')}}">Survey</a>
 
   </div> 
   <br></br>
@@ -38,19 +38,19 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="img/wp1.jpg" height ="550" style="width:100%">
+    <img src="../static/images/wp1.jpg" height ="550" style="width:100%">
     <div class="text text-center">2010 BP oil spill</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img/wp2.jpg" height ="530" style="width:100%">
+    <img src="../static/images/wp2.jpg" height ="530" style="width:100%">
     <div class="text text-center">2021 Gulf Fire</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img/wp3.jpg" height ="530" style="width:100%">
+    <img src="../static/images/wp3.jpg" height ="530" style="width:100%">
     <div class="text text-center">Oil spill still harming wildlife</div>
   </div>
 
@@ -81,6 +81,6 @@
     <p>There have been many known effects of water pollution that have proven to be detrimental to one’s health. The most notable danger associated with water pollution is that it can make one ill and in the worst-case scenario it could cause the death of a human being. It’s able to do this because polluted water can contain waterborne pathogens which can contribute to the rapid spread of diseases, especially in communities in which poverty exists. Not only are humans subject to the harmful dangers of water pollution, but aquatic wildlife too. Aquatic creatures are incapable of thriving when they’re exposed to contaminants and are forced to live in unlivable conditions.
 
     </p>
-    <script src="script.js"></script>
+    <script src="../static/css/script.js"></script>
   </body>
 </html>

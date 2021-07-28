@@ -1,10 +1,9 @@
-/*
 .body{
-  background-image: url("img/background-image.png");
+  background-image: url("background image flask.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-*/
+
 .navbar {
   overflow: hidden;
   background-color: #333;

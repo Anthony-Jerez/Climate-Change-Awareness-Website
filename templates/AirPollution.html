@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/style.css?q={{ time }}" rel="stylesheet" type="text/css" />
   </head>
 
   <style>
@@ -12,21 +12,21 @@
 	font-size: 48px;
    }
 </style>
-  <body>
+  <body class = "body">
 <div class = "navbar">
-    <a class ="home" href = "index.html"> Home</a>
+    <a class ="home" href = "{{  url_for('index')}}"> Home</a>
         <div class="dropdown ">
     <button class="dropbtn active">Pollution
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="AirPollution.html">Air Pollution</a>
-      <a href="WaterPollution.html">Water Pollution</a>
-      <a href="LandPollution.html">Land Pollution</a>
+      <a href="{{  url_for('AirPollution')}} ">Air Pollution</a>
+      <a href="{{  url_for('WaterPollution')}} ">Water Pollution</a>
+      <a href="{{  url_for('LandPollution')}}">Land Pollution</a>
     </div>
   </div>
-    <a href = "WaysToHelp.html">Ways To Help</a>
-    <a href = "Survey.html">Survey</a>
+    <a href = "{{  url_for('WaysToHelp')}}">Ways To Help</a>
+    <a href = "{{  url_for('Survey')}}">Survey</a>
 
   </div> 
   </div> 
@@ -40,19 +40,19 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="img/ap1.jpg" height ="530" style="width:100%">
-    <div class="text text-center">Caption Text</div>
+    <img src="../static/images/ap1.jpeg" height ="530" style="width:100%">
+    <div class="text text-center">Factories burning fossil fuels</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img/ap2.jpg" height ="530" style="width:100%">
+    <img src="../static/images/ap2.jpg" height ="530" style="width:100%">
     <div class="text text-center">1966 NYC Smog Crises</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img/ap3.jpg" height ="530" style="width:100%">
+    <img src="../static/images/ap3.jpg" height ="530" style="width:100%">
     <div class="text text-center">Smog covers Beijing, China</div>
   </div>
 
@@ -82,6 +82,6 @@
     <p>Air pollution mostly derives from energy production and consumption. When energy is produced, fossil fuels are burned, causing harmful gases such as sulfur dioxide to be emitted and released into the air. Once these harmful pollutants are released into the air, they react with sunlight to produce smog. However, not all air pollution is caused by human intervention. The most noticeable natural form of air pollution is caused by volcanoes when they either erupt or release toxic gases. </p>
     <p>The effects of air pollution can vary depending on a variety of factors such as the duration of the exposure or type of pollutant. However, it’s undoubtedly clear that most pollutants have the potential to cause health complications. For instance, if smog(one common type of air pollution) is present, it has the potential to severely damage one’s lungs, resulting in breathing difficulties. Burning fossil fuels have also been known to increase the number of greenhouse gases emitted into the atmosphere which has contributed to climate change and worsened the state that we’re in. It’s clear that any form of exposure to air pollution can be detrimental to one’s well-being including our planet’s. </p>
 
-    <script src="script.js"></script>
+    <script src="../static/css/script.js"></script>
   </body>
 </html>
