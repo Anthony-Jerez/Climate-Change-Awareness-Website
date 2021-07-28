@@ -26,12 +26,15 @@
   </div> 
   <div class = 'bodytext'>
         <h1>Check Air Quality In Your Location</h1>
-        <p>Input Borough:</p>
+        <p></p>
         <form method="POST" action="/SurveyResults">
-            <input type="text" name="borough" placeholder="e.g. &quot;queens&quot;"/>
+            <label for = postal>Input zip-code:</label>
+            <input type="text" name="postal" placeholder="e.g. &quot;90210 quot;"/><br></br>
+            <label for = country>Input Country Code:</label>
+            <input type = "text" name = "country" placeholder = "e.g. &quot;US quot;"/>
             <input type="submit" value="Submit"/>
         </form>
-    </div>
+  </div>
     <script src="../static/css/script.js"></script>
   </body>
 </html>
