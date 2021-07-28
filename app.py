@@ -2,7 +2,7 @@
 # -- Import section --
 from flask import Flask, render_template, request, url_for
 from datetime import datetime
-from model import getImageUrlFrom
+from model import determine_air_quality
 import os
 
 # -- Initialization section --
@@ -37,3 +37,12 @@ def WaysToHelp():
 @app.route('/Survey')
 def Survey():
     return render_template("Survey.html", time = datetime.now())
+
+@app.route('/getSurveyResults', methods = ["GET", "POST"])
+def getSurveyResults():     
+
+    user_borough = request.form["borough"]
+
+    air_quality = determine_air_quality(user_borough)
+
+    return "Air Quality: " + air_quality
