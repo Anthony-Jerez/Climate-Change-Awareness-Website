@@ -24,15 +24,10 @@
   </div> 
   </div> 
   </div> 
-  <div class = 'bodytext'>
-        <h1>Check Air Quality In Your Location</h1>
-        <p>Input Borough:</p>
-        <form method="POST" action="/SurveyResults">
-            <input type="text" name="borough" placeholder="e.g. &quot;queens&quot;"/>
-            <input type="submit" value="Submit"/>
-        </form>
-    </div>
-    <script src="../static/css/script.js"></script>
+  <div class = "bodytext">
+    <h1>The air quality for your location is {{airquality}}</h1>
+  </div>
+  
+      <script src="../static/css/script.js"></script>
   </body>
 </html>
-

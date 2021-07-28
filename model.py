@@ -8,8 +8,10 @@ def determine_air_quality(userLocation):
         "staten island": "11" 
     }
     for location in airqualities:
-        if userLocation == location: 
+        if userLocation.lower() == location: 
             return airqualities[location]
+        else: 
+            return "Invalid Response"
 
 
 

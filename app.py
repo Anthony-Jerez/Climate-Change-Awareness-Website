@@ -38,11 +38,12 @@ def WaysToHelp():
 def Survey():
     return render_template("Survey.html", time = datetime.now())
 
-@app.route('/getSurveyResults', methods = ["GET", "POST"])
+@app.route("/SurveyResults", methods = ["GET", "POST"])
 def getSurveyResults():     
 
     user_borough = request.form["borough"]
 
     air_quality = determine_air_quality(user_borough)
 
-    return "Air Quality: " + air_quality
+    return render_template("SurveyResults.html", time = datetime.now(), airquality = air_quality)
+    
