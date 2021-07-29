@@ -3,6 +3,10 @@
 from flask import Flask, render_template, request, url_for
 from datetime import datetime
 from model import determine_air_quality
+from model import recycle
+from model import reusableProducts
+from model import dietType
+from model import transportation
 import os
 # -- Initialization section --
 app = Flask(__name__)
@@ -28,10 +32,21 @@ def Survey():
     return render_template("Survey.html", time = datetime.now())
 @app.route("/SurveyResults", methods = ["GET", "POST"])
 def getSurveyResults():     
+    recycleFreq = request.form["recycleFreq"]
+    reusable = request.form["reusable"]
+    diet = request.form["diet"]
+    trans = request.form["trans"]
+    
     postal = request.form["postal"]
     country = request.form["country"]
+
+    rec = recycle(recycleFreq)
+    rp = reusableProducts(reusable)
+    dt = dietType(diet)
+    tt = transportation(trans)
+
     air_quality = determine_air_quality(postal, country)
-    return render_template("SurveyResults.html", time = datetime.now(), airquality = air_quality)
+    return render_template("SurveyResults.html", time = datetime.now(), airquality = air_quality, rec = rec, rp = rp, dt = dt, tt = tt)
     
 #user_borough = request.form["borough"]
 

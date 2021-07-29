@@ -25,17 +25,59 @@
   </div> 
   </div> 
   <div class = 'bodytext'>
-        <h1>Check Air Quality In Your Location</h1>
-        <p></p>
         <form method="POST" action="/SurveyResults">
-            <label for = postal>Input zip-code:</label>
-            <input type="text" name="postal" placeholder="e.g. &quot;90210 quot;"/><br></br>
+            <h2>What's Your Impact on the Planet?</h2>
+            <h4>Instructions: This survey is used to measure the impact that you have on the environment on a day-to-day basis. Here we prompt you to answer a questionaire to calculate your impact. Proceed to answering the questions by selecting one answer for each corresponding question. At the end, if you feel comfortable with inputting in your postal code and country code, 
+                you will be able to view the air quality of the area in which you reside in.</h4>
+            <p>How Frequently do you Recycle:</p>
+            <input type="radio" id="q1a1" name="recycleFreq" value = "Never">
+            <label for="q1a1">Never</label><br>
+            <input type="radio" id="q1a2" name="recycleFreq" value = "Occasionally">
+            <label for="q1a2">Occasionally</label><br>
+            <input type="radio" id="q1a3" name="recycleFreq" value="Often">
+            <label for="q1a3">Often</label><br>
+            <input type="radio" id="q1a4" name="recycleFreq" value="Always">
+            <label for="q1a4">As much as Possible</label><br>
+            <p>How often do you use reusable products (e.g. Water Bottles, Bags, Straws, Masks):</p>
+            <input type="radio" id="q2a1" name="reusable" value="Never">
+            <label for="q2a1">Never</label><br>
+            <input type="radio" id="q2a2" name="reusable" value="Occasionally">
+            <label for="q2a2">Occasionally</label><br>
+            <input type="radio" id="q2a3" name="reusable" value="Often">
+            <label for="q2a3">Often</label><br>
+            <input type="radio" id="q2a4" name="reusable" value="Always">
+            <label for="q2a4">As much as Possible</label>
+            <p>How would you best describe your diet?</p>
+            <input type="radio" id="q3a1" name="diet" value="vegan">
+            <label for="q3a1">Vegan</label><br>
+            <input type="radio" id="q3a2" name="diet" value = "vegetarian">
+            <label for="q3a2">Vegetarian</label><br>
+            <input type="radio" id="q3a3" name="diet" value="nBeef">
+            <label for="q3a3">No Beef</label><br>
+            <input type="radio" id="q3a4" name="diet" value="sMeat">
+            <label for="q3a4">Meat Seldomly</label><br>
+            <input type="radio" id="q3a5" name="diet" value="oMeat">
+            <label for="q3a5">Meat Often</label><br>
+            <p>What is your most frequent mode of transportation?</p>
+            <input type="radio" id="q4a1" name="trans" value="car">
+            <label for="q4a1">Car</label><br>
+            <input type="radio" id="q4a2" name="trans" value = "bus">
+            <label for="q4a2">Bus</label><br>
+            <input type="radio" id="q4a3" name="trans" value="train">
+            <label for="q4a3">Train</label><br>
+            <input type="radio" id="q4a4" name="trans" value="bike">
+            <label for="q4a4">Bike</label><br>
+            <input type="radio" id="q4a5" name="trans" value="walk">
+            <label for="q4a5">Walking</label><br>
+            <h2>Check Air Quality In Your Location</h2>
+            <label for = postal>Input Zip-Code:</label>
+            <input type="text" name="postal" placeholder="e.g. &quot;90210&quot;"/><br></br>
             <label for = country>Input Country Code:</label>
-            <input type = "text" name = "country" placeholder = "e.g. &quot;US quot;"/>
+            <input type = "text" name = "country" placeholder = "e.g. &quot;US&quot;"/>
+            <br></br>
             <input type="submit" value="Submit"/>
         </form>
-  </div>
+    </div>
     <script src="../static/css/script.js"></script>
   </body>
 </html>
-
