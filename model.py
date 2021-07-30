@@ -38,11 +38,11 @@ def dietType(diet):
     if diet == "vegan" or diet == "vegetarian":
         return f"You are a {diet}. Meat consumption is responsible for releasing greenhouse gases such as methane, CO2, and nitrous oxide. Being {diet} helps reduce your carbon footprint, and helps reduce pollution!"
     elif diet == "nBeef":
-        return "Beef accounts for nearly half of agricultural emissions and about 3.7%% of the US total carbon emission. Cutting beef from your diet helps reduce carbon emissions and nearly every form of pollution, and it's healthier."
+        return "Beef accounts for nearly half of agricultural emissions and about 3.7% of the US total carbon emission. Cutting beef from your diet helps reduce carbon emissions and nearly every form of pollution, and it's healthier."
     elif diet == "sMeat":
-        return "You occasionally consume meat. Reducing meat consumption is a good way to reduce your carbon footprint"
+        return "You occasionally consume meat. Reducing meat consumption is a good way to reduce your carbon footprint."
     elif diet == "oMeat":
-        return "You often consume Meat products. Meat and dairy specifically accounts for around 14.5%% of global greenhouse gas emissions. You don't have to go vegan, however reducing your meat consumption can help reduce pollution and carbon emissions, and may even have benefits to your health."
+        return "You often consume Meat products. Meat and dairy specifically accounts for around 14.5% of global greenhouse gas emissions. You don't have to go vegan, however reducing your meat consumption can help reduce pollution and carbon emissions, and may even have benefits to your health."
     else:
         return ""
 def transportation(trans):
@@ -53,7 +53,16 @@ def transportation(trans):
     elif trans == "car":
         return "Using a personal vehicle is often necessary, however also contributes to climate change. Whenever possible, try to use public transportation or walk."
     else: 
-        return ""    
+        return ""   
+def total(recycleFreq, reusable, diet, trans):
+    if recycleFreq == "Never" and reusable == "Never" and diet == "oMeat" and trans == "car":
+        return "Your Carbon footprint is Very High. Here are some ways to help you reduce it."
+    elif (recycleFreq != "Always" or recycleFreq != "Often") and (reusable != "Always" or reusable != "Often") and (diet == "oMeat" or diet == "sMeat")and trans == "car":
+        return "Your Carbon footprint is High. Here are some ways to help you reduce Pollution"
+    elif recycleFreq == "Always" and reusable == "Always" and (diet == "vegan" or diet == "vegetarian") and (trans == "Biking" or trans == "Walking"):
+        return "Your Carbon Footprint is Low. Congratulations!"
+    else:
+        return "Your Carbon Footprint is Moderate. Here are some other ways to help you reduce Pollution." 
     
     #response = requests.request("GET", url, headers=headers, params=querystring)
     #return response.text

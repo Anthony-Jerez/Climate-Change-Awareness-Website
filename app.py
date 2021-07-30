@@ -7,6 +7,7 @@ from model import recycle
 from model import reusableProducts
 from model import dietType
 from model import transportation
+from model import total
 import os
 # -- Initialization section --
 app = Flask(__name__)
@@ -44,10 +45,10 @@ def getSurveyResults():
     rp = reusableProducts(reusable)
     dt = dietType(diet)
     tt = transportation(trans)
-
-    air_quality = determine_air_quality(postal, country)
-    return render_template("SurveyResults.html", time = datetime.now(), airquality = air_quality, rec = rec, rp = rp, dt = dt, tt = tt)
+    tot = total(recycleFreq, reusable, diet, trans)
     
+    air_quality = determine_air_quality(postal, country)
+    return render_template("SurveyResults.html", time = datetime.now(), airquality = air_quality, rec = rec, rp = rp, dt = dt, tt = tt, tot = tot)
 #user_borough = request.form["borough"]
 
 #air_quality = determine_air_quality(user_borough)

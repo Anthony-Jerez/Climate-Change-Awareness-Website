@@ -25,11 +25,21 @@
   </div> 
   </div> 
   <div class = "bodytext">
-    <p>Survey Results: {{rec}}</p>
-    <p>Survey Results: {{rp}}</p>
-    <p>Survey Results: {{dt}}</p>
-    <p>Survey Results: {{tt}}</p>
-    <h1>The air quality for your location is:   {{airquality}}</h1>
+    <h5>{{tot}}</h5>
+    <p> {{rec}}</p>
+    <p> {{rp}}</p>
+    <p> {{dt}}</p>
+    <p> {{tt}}</p>
+      <h3>Here are the air quality for your location:</h3>   
+    <h5>{{airquality}}</h5>
+    <a href = "{{  url_for('Survey')}}">Retake Survey</a>
+    <h4>Air quality explanation.</h4>
+    <li>CO: Carbon monoxide conc (ppm)</li>
+    <li>Nitrogen dioxide conc (ppb)</li>
+    <li>OZONE: OZONE conc (ppb)</li>
+    <li> PM10: Particulate matter < 10um (ug/m3)</li>
+    <li>PM2.5: Particulate matter < 2.5um (ug/m3)</li>
+    <li>SO2: Sulphur dioxide conc (ppb)</li> 
   </div>
   
       <script src="../static/css/script.js"></script>
